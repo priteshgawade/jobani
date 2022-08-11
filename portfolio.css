@@ -11,7 +11,7 @@ body {
     background-color: cover;
     background-position: center;
     background-attachment: fixed;
-    z-index: -1;
+    z-index: -2;
 }
 
 #header {
@@ -27,6 +27,7 @@ body {
     bottom: 0;
     left: 0;
     z-index: 1;
+    display: block;
 }
 
 .pic {
@@ -37,8 +38,8 @@ body {
     margin: 8px 75px;
 }
 
-i {
-    padding: 0 30px 0 0;
+.l-e i {
+    padding: 0 20px 0 0;
     font-size: 24px;
     width: 1.7em;
 }
@@ -57,6 +58,10 @@ i {
     flex-wrap: wrap;
     align-content: center;
     justify-content: flex-start;
+}
+
+.nav-bar li {
+    list-style: none;
 }
 
 .nt {
@@ -149,11 +154,6 @@ a span:hover {
 
 }
 
-#ppic {
-    width: 240px;
-    height: 240px;
-}
-
 .row {
     display: flex;
 
@@ -182,6 +182,10 @@ a span:hover {
     padding: 60px;
 }
 
+.contact-flex {
+    display: flex;
+}
+
 .resume {
     background-color: #fff;
     padding: 60px;
@@ -189,7 +193,8 @@ a span:hover {
 
 .Portfolio,
 .services,
-.testimonials {
+.testimonials,
+.contact {
     background-color: #fff;
     padding: 60px;
 }
@@ -201,7 +206,8 @@ a span:hover {
 .progress-bar {
     height: 10px;
     width: 100%;
-    background-color: #149ddd;
+    background-color: #4c6774;
+    color: #149ddd;
 }
 
 .left {
@@ -209,25 +215,98 @@ a span:hover {
     padding: 5px;
 }
 
+.s-item {
+    width: 300px;
+    height: 180px;
+    padding: 0 12px;
+}
+
+.s-item p,
+h4,
+.address h4,
+p {
+    margin-left: 80px;
+}
+
+.s-item p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.s-item h4 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+}
+
+.icon i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.icon {
+    background-color: rgb(39, 144, 237);
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    float: left;
+}
+
+.contact-icon {
+    background: #dff3fc;
+    width: 44px;
+    height: 44px;
+}
+
+.contact-icon i {
+
+    font-size: 20px;
+    color: #149ddd;
+}
+
 .service-items {
     display: flex;
     flex-wrap: wrap;
 }
 
-.s-item {
-    margin: 10px;
-    background-color: beige;
-    display: flex;
+.title-holder {
+    margin-left: 150px;
 }
 
+#topic-heading::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: #1f5297;
+    display: block;
+}
 
 .title {
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     color: #fff;
+    z-index: -1;
 
+}
+
+#title-name {
+    font-size: 64px;
+    margin: 0 0 15px 0;
+    line-height: 56px;
+    font-family: "Raleway", sans-serif;
+}
+
+#title-para {
+    font-size: 26px;
 }
 
 .right {
@@ -240,13 +319,6 @@ a span:hover {
     margin-top: -2px;
     border-left: 2px solid #1f5297;
     position: relative;
-}
-
-.icon {
-    float: left;
-    display: flex;
-    justify-content: center;
-    margin: 0;
 }
 
 .info {
