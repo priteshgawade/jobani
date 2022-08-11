@@ -23,6 +23,7 @@ body {
     width: 300px;
     padding: 15px;
     position: fixed;
+    margin: 0;
     top: 0;
     bottom: 0;
     left: 0;
@@ -143,8 +144,14 @@ a span:hover {
     background-color: #212431;
 }
 
+#ppic {
+    width: 300px;
+    margin: 10px;
+}
+
 .main {
     margin-left: 330px;
+    overflow: hidden;
 }
 
 #about-pic {
@@ -223,9 +230,15 @@ a span:hover {
 
 .s-item p,
 h4,
-.address h4,
-p {
+.address h4 p {
     margin-left: 80px;
+}
+
+.address p {
+    margin-left: 80px;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
 }
 
 .s-item p {
@@ -334,6 +347,8 @@ p {
     display: flex;
     position: relative;
     flex-wrap: wrap;
+    justify-content: center;
+
 }
 
 .links li {
@@ -344,4 +359,19 @@ p {
 .Skills {
     background-color: #f5f8fd;
     padding: 60px;
+}
+
+@media (max-width: 768px) {
+    #header {
+        display: none;
+    }
+
+    * {
+        flex-direction: column;
+    }
+
+    .main {
+        margin-left: 0px;
+        width: 100%;
+    }
 }
