@@ -11,9 +11,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <title>Document</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script>
+        function myfunction() {
+            if (document.getElementById('header').style.display !== 'none') {
+                document.getElementById('header').style.display = 'none'
+            }
+            else {
+                document.getElementById('header').style.display = 'block'
+            }
+        }
+
+    </script>
 </head>
 
 <body>
+    <div class="btn" id="icon-btn">
+        <button onclick="myfunction();"><i class="fas fa-bars"></i></button>
+    </div>
+    <!-- <div class=""></div> -->
+    <img src="background.jpg" class="hero" alt="">
     <div class="header">
         <div>
             <header id="header">
@@ -47,17 +64,23 @@
                         </ul>
                     </nav>
                 </div>
+            </header>
         </div>
-        <img src="https://bootstrapmade.com/demo/templates/iPortfolio/assets/img/hero-bg.jpg" id="hero" alt="">
 
+        <div class="title" id="hero">
+            <div class="title-holder">
+                <h1 id="title-name">Pritesh Gawade</h1>
+                <p id="title-para">I'm Developer</p>
+            </div>
+        </div>
     </div>
     <div class="main">
-        <div class="title">
+        <!-- <div class="title" id="hero">
             <div class="title-holder">
                 <h1 id="title-name">Pritesh Gawade</h1>
                 <p id="title-para">I'm<span data-typed-items="Designer, Developer, Photograper"></span></p>
             </div>
-        </div>
+        </div> -->
         <div class="about" id="about">
             <div class="about-heading">
                 <h2 id="topic-heading">About</h2>
@@ -71,39 +94,42 @@
                 <div id="about-info">
                     <h3>UI/UX Designer & Web Developer.</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nam pariatur aliquam non
-                        quibusdam
-                        enim aliquid quo necessitatibus quaerat! Cumque, amet. Velit autem nam numquam possimus in
-                        obcaecati corrupti quasi.</p>
-                    <ul>
-                        <li>Birthday: 1 May 1995</li>
-                        <li>
-                            Website:
-                            www.example.com</li>
-                        <li>
-                            Phone:
-                            +123 456 7890</li>
-                        <li>
-                            City:
-                            New York, USA</li>
-                        <li>
-                            Age:
-                            30</li>
-                        <li>
-                            Degree:
-                            Master</li>
-                        <li>PhEmailone:
-                            email@example.com</li>
-                        <li>Freelance:
-                            Available</li>
-                    </ul>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis voluptatum ducimus distinctio
-                        nemo
-                        vitae reiciendis ab fugit minima! Rerum, natus dolore. Recusandae est maxime ratione nisi
-                        nobis
-                        facilis ipsa doloribus!</p>
+                        quibusdam enim aliquid quo necessitatibus quaerat! Cumque, amet.</em></p>
+                    <div class="personal-info">
+                        <ul class="ul-side">
+                            <li><i class="fa-solid fa-angle-right"></i><strong>Birthday:</strong> 1 May 1995</li>
+                            <li><i class="fa-solid fa-angle-right"></i><strong>Website:</strong> www.example.com
+                            </li>
+                            <li><i class="fa-solid fa-angle-right"></i>
+                                <strong>Phone:</strong>
+                                +123 456 7890
+                            </li>
+                            <li><i class="fa-solid fa-angle-right"></i>
+                                <strong>City:</strong>
+                                New York, USA
+                            </li>
+                        </ul>
+                        <ul class="ul-side">
+                            <li><i class="fa-solid fa-angle-right"></i>
+                                <strong>Age:</strong>30
+                            </li>
+                            <li><i class="fa-solid fa-angle-right"></i>
+                                <strong>Degree:</strong>
+                                Master
+                            </li>
+                            <li><i class="fa-solid fa-angle-right"></i><strong>PhEmailone:</strong>email@example.com
+                            </li>
+                            <li><i class="fa-solid fa-angle-right"></i><strong>Freelance:</strong>
+                                Available</li>
+                        </ul>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sunt explicabo, tempore
+                        reiciendis doloremque nemo soluta temporibus, dicta mollitia excepturi voluptates aspernatur.
+                        Vero, consectetur porro expedita sunt eum aspernatur animi magnam reprehenderit impedit
+                        reiciendis itaque esse minus distinctio nostrum odio cumque quod nihil aliquam excepturi maiores
+                        velit, rerum ea voluptates.</p>
                 </div>
             </div>
-
         </div>
         <div class="Facts">
             <div>
@@ -115,10 +141,17 @@
             <div id="card-layout">
                 <div id="card">
                     <i class="fa-solid fa-face-smile"></i><span>232</span>
+                    <p><strong>Happy Clients</strong> consequuntur quae</p>
                 </div>
-                <div id="card"></div>
-                <div id="card"></div>
-                <div id="card"></div>
+                <div id="card"><i class="fa-solid fa-book"></i><span>232</span>
+                    <p><strong>Projects</strong> adipisci atque cum quia aut</p>
+                </div>
+                <div id="card"><i class="fa-solid fa-headset"></i><span>232</span>
+                    <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
+                </div>
+                <div id="card"><i class="fa-solid fa-user-group"></i><span>232</span>
+                    <p><strong>Hard Workers</strong> rerum asperiores dolor</p>
+                </div>
             </div>
         </div>
         <div class="Skills">
@@ -130,43 +163,34 @@
             </div>
             <div class="progress row">
                 <div class="left">
-                    <div>
+                    <div class="skill-name">
                         <span>HTML <i class="val">100%</i></span>
+                        <progress class="progress-bar" id="file" value="100" max="100"></progress>
                     </div>
-                    <div class="progress-bar" aria-valuemax="100" aria-valuenow="100" aria-valuemin="0"
-                        role="progressbar">
-                    </div>
-                    <div>
+                    <div class="skill-name">
                         <span>CSS <i class="val">90%</i></span>
+
+                        <progress class="progress-bar" id="file" value="90" max="100"></progress>
                     </div>
-                    <div class="progress-bar" aria-valuemax="100" aria-valuenow="90" aria-valuemin="0"
-                        role="progressbar">
-                    </div>
-                    <div>
+                    <div class="skill-name">
                         <span>JAVASCRIPT <i class="val">75%</i></span>
-                    </div>
-                    <div class="progress-bar" aria-valuemax="100" aria-valuenow="75" aria-valuemin="0"
-                        role="progressbar">
+                        <progress class="progress-bar" id="file" value="40" max="100"></progress>
                     </div>
                 </div>
                 <div class="right">
-                    <div>
+                    <div class="skill-name">
                         <span>PHP<i class="val">80%</i></span>
+                        <progress class="progress-bar" id="file" value="80" max="100"></progress>
                     </div>
-                    <div class="progress-bar" aria-valuemax="100" aria-valuenow="80" aria-valuemin="0"
-                        role="progressbar">
-                    </div>
-                    <div>
+                    <div class="skill-name">
                         <span>WORDPRESS/CMS<i class="val">90%</i></span>
+
+                        <progress class="progress-bar" id="file" value="90" max="100"> </progress>
                     </div>
-                    <div class="progress-bar" aria-valuemax="100" aria-valuenow="90" aria-valuemin="0"
-                        role="progressbar">
-                    </div>
-                    <div>
+                    <div class="skill-name">
                         <span>PHOTOSHOP<i class="val">55%</i></span>
-                    </div>
-                    <div class="progress-bar" aria-valuemax="100" aria-valuenow="55" aria-valuemin="0"
-                        role="progressbar">
+
+                        <progress class="progress-bar" id="file" value="30" max="100"></progress>
                     </div>
                 </div>
             </div>
@@ -200,6 +224,8 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat autem molestias
                             temporibus nesciunt recusandae ad rem eius, esse, placeat, consectetur beatae amet optio
                             necessitatibus ducimus cumque delectus error quasi dolorum.</p>
+                    </div>
+                    <div class="resume-item">
                         <h3>BACHELOR OF FINE ARTS & GRAPHIC DESIGN</h3>
                         <h5>2015-2017</h5>
                         <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
@@ -207,6 +233,7 @@
                             temporibus nesciunt recusandae ad rem eius, esse, placeat, consectetur beatae amet optio
                             necessitatibus ducimus cumque delectus error quasi dolorum.</p>
                     </div>
+
                 </div>
                 <div class="right ">
                     <h2>Professional Experience</h2>
@@ -259,21 +286,21 @@
             <div class="portfolio-content">
                 <div>
                     <div>
-                        <img id="ppic" src="images/portfolio-1.jpg" alt="">
+                        <img id="ppic" src="/images/portfolio-1.jpg" alt="">
                     </div>
                     <div></div>
                     <div></div>
                 </div>
                 <div>
                     <div>
-                        <img id="ppic" src="images/portfolio-2.jpg" alt="">
+                        <img id="ppic" src="/images/portfolio-2.jpg" alt="">
                         <div></div>
                         <div></div>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <img id="ppic" src="images/portfolio-3.jpg" alt="">
+                        <img id="ppic" src="/images/portfolio-3.jpg" alt="">
 
                         <div></div>
                         <div></div>
@@ -281,7 +308,7 @@
                 </div>
                 <div>
                     <div>
-                        <img id="ppic" src="images/portfolio-4.jpg" alt="">
+                        <img id="ppic" src="/images/portfolio-4.jpg" alt="">
 
                         <div></div>
                         <div></div>
@@ -289,14 +316,14 @@
                 </div>
                 <div>
                     <div>
-                        <img id="ppic" src="images/portfolio-5.jpg" alt="">
+                        <img id="ppic" src="/images/portfolio-5.jpg" alt="">
                         <div></div>
                         <div></div>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <img id="ppic" src="images/portfolio-6.jpg" alt="">
+                        <img id="ppic" src="/images/portfolio-6.jpg" alt="">
                         <div>
                             <a href=""></a>
                             <a href=""></a>
@@ -325,7 +352,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                 </div>
                 <div class="s-item">
-                    <div class="icon"><i class="fa-solid fa-signal-bars-good"></i></div>
+                    <div class="icon"><i class="fa-solid fa-bars-progress"></i></div>
                     <h4>Lorem ipsum</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                 </div>
@@ -335,7 +362,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                 </div>
                 <div class="s-item">
-                    <div class="icon"><i class="fa-solid fa-sun-bright"></i></div>
+                    <div class="icon"><i class="fa-solid fa-sun"></i></div>
                     <h4>Lorem ipsum</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam earum consequatur
                         harum inventore itaque quia libero totam et, </p>
@@ -355,19 +382,97 @@
                     harum odit delectus a!</p>
             </div>
             <div>
+                <div class="slides">
+                    <div class="slide1 slide">
+                        <p class="saying">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, unde, culpa
+                            totam
+                            recusandae sunt quod numquam iste voluptatum incidunt cumque dolore commodi quaerat illo
+                            deleniti assumenda
+                            repudiandae exercitationem nemo. Quia!</p>
+                        <div class="testimonials-image"><img src="/images/IMG_8422.JPG" alt=""></div>
+                        <h5 class="testimonials-name">Nikeel Gawade</h5>
+                        <p class="position">Freelance</p>
+                    </div>
+                    <div class="slide2 slide">
+                        <p class="saying">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, unde, culpa
+                            totam recusandae
+                            sunt quod numquam iste voluptatum incidunt cumque dolore commodi quaerat illo deleniti
+                            assumenda
+                            repudiandae exercitationem nemo. Quia!</p>
+                        <img src="" alt="">
+                        <h5 class="testimonials-name">Nikeel Gawade</h5>
+                        <p class="position">Freelance</p>
+                    </div>
+                    <div class="slide3 slide">
+                        <p class="saying">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, unde, culpa
+                            totam recusandae
+                            sunt quod numquam iste voluptatum incidunt cumque dolore commodi quaerat illo deleniti
+                            assumenda
+                            repudiandae exercitationem nemo. Quia!</p>
+                        <img src="" alt="">
+                        <h5 class="testimonials-name">Nikeel Gawade</h5>
+                        <p class="position">Freelance</p>
+                    </div>
+                    <div class="slide4 slide">
+                        <p class="saying">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, unde, culpa
+                            totam recusandae
+                            sunt quod numquam iste voluptatum incidunt cumque dolore commodi quaerat illo deleniti
+                            assumenda
+                            repudiandae exercitationem nemo. Quia!</p>
+                        <img src="" alt="">
+                        <h5 class="testimonials-name">Nikeel Gawade</h5>
+                        <p class="position">Freelance</p>
+                    </div>
+                    <div class="slide5 slide">
+                        <p class="saying">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, unde, culpa
+                            totam recusandae
+                            sunt quod numquam iste voluptatum incidunt cumque dolore commodi quaerat illo deleniti
+                            assumenda
+                            repudiandae exercitationem nemo. Quia!</p>
+                        <img src="" alt="">
+                        <h5 class="testimonials-name">Nikeel Gawade</h5>
+                        <p class="position">Freelance</p>
+                    </div>
+                    <div class="slide6 slide">
+                        <p class="saying">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, unde, culpa
+                            totam
+                            recusandae sunt quod numquam iste voluptatum incidunt cumque dolore commodi quaerat illo
+                            deleniti assumenda
+                            repudiandae exercitationem nemo. Quia!</p>
+                        <div class="testimonials-image"><img src="/images/IMG_8422.JPG" alt=""></div>
+                        <h5 class="testimonials-name">Nikeel Gawade</h5>
+                        <p class="position">Freelance</p>
+                    </div>
+                </div>
 
-                <div class="slide-selector"></div>
+                <div class="slide-selector">
+                    <input type="radio" name="slide" id="slide1" checked>
+                    <label for="slide1" class="circle"></label>
+                    <input type="radio" name="slide" id="slide2">
+                    <label for="slide2" class="circle"></label>
+                    <input type="radio" name="slide" id="slide3">
+                    <label for="slide3" class="circle"></label>
+                    <input type="radio" name="slide" id="slide4">
+                    <label for="slide4" class="circle"></label>
+                    <input type="radio" name="slide" id="slide5">
+                    <label for="slide5" class="circle"></label>
+                    <!-- <div ><a href="#slide2" role="button"></a></div>
+                    <div class="circle"><a href="#slide3"></a></div>
+                    <div class="circle"><a href="#slide4"></a></div>
+                    <div class="circle"><a href="#slide5"></a></div>
+                    <div class="circle"><a href="#slide6"></a></div> -->
+                </div>
             </div>
         </div>
         <div class="contact" id="contact">
             <div>
-                <h2>Contact</h2>
+                <h2 id="topic-heading">Contact</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A sapiente nisi eos, rem ullam laudantium
                     animi excepturi aut adipisci deleniti totam ipsam deserunt itaque voluptates iusto dicta expedita
                     eligendi nihil!</p>
             </div>
             <div class="contact-flex">
-                <div class="">
+                <div class="findme">
                     <div class="address">
                         <div class="icon contact-icon"><i class="fa-solid fa-location-dot"></i></div>
                         <h4>Location:</h4>
@@ -383,21 +488,31 @@
                         <h4>Call:</h4>
                         <p>+1 5589 55488 55s</p>
                     </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30759.831607187065!2d74.0788303701677!3d15.485564361591495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfa38c7277b541%3A0x7bfddf204b337e23!2sVantem%2C%20Goa%20403506!5e0!3m2!1sen!2sin!4v1660304052524!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div>
+                <div class="contact-form">
+                    <h2>Get in Touch!</h2>
                     <form action="">
-                        <label for="name">Your Name <br>
-                            <input type="text">
-                        </label>
-                        <label for="email">Your Email<br><input type="text"></label>
-                        <label for="subject">Subject <br><input type="text"></label>
-                        <label for="message">Message <br><textarea name="message" id="" cols="30"
-                                rows="10"></textarea></label>
+                        <label for="name">Your Name </label>
+                        <input type="text" name="" value="">
+
+                        <label for="email">Your Email </label>
+                        <input type="text" name="email" value="">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" value="">
+                        <label for="message">Message </label>
+                        <textarea name="message" id="" cols="40" rows="10" value=""></textarea>
                     </form>
+                    <div class="submit">
+                        <input id="submit-btn" type="submit" value="Send">
+                    </div>
                 </div>
             </div>
         </div>
-
+    </div>
 </body>
 
 </html>

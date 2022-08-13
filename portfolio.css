@@ -2,16 +2,21 @@ body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
     color: #272829;
+    position: relative;
 }
 
-#hero {
-    position: fixed;
+.hero {
+    position: absolute;
     width: 100%;
-    height: auto;
-    background-color: cover;
+    height: 100vh;
+    background: no-repeat;
+    background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     z-index: -2;
+}
+
+p {
+    line-height: 20px;
 }
 
 #header {
@@ -21,7 +26,7 @@ body {
 #header {
     background: #040b14;
     width: 300px;
-    padding: 15px;
+    /* padding: 15px; */
     position: fixed;
     margin: 0;
     top: 0;
@@ -149,16 +154,60 @@ a span:hover {
     margin: 10px;
 }
 
+.personal-info {
+    margin: 50px 0 25px 0;
+    display: flex;
+    width: 100%;
+}
+
+.personal-info ul li {
+    list-style: none;
+    display: flex;
+    margin-bottom: 10px;
+
+}
+
+#card span {
+    font-size: 48px;
+    margin: 0 0 0 60px;
+    display: block;
+    color: #050d18;
+    line-height: 40px;
+}
+
+#card p {
+    margin: 10px 0 0 60px;
+
+}
+
+.personal-info ul li i {
+    color: #149ddd;
+}
+
+.personal-info ul li strong {
+    margin-right: 9px;
+}
+
+.personal-info ul {
+    margin: 0;
+    padding: 0;
+}
+
 .main {
-    margin-left: 330px;
+    margin-left: 300px;
     overflow: hidden;
 }
 
 #about-pic {
-    width: 240px;
-    height: 240px;
+    width: 290px;
+    height: 290px;
     float: left;
 
+}
+
+#about-info * {
+    margin-top: 0;
+    margin-left: 15px;
 }
 
 .row {
@@ -168,57 +217,103 @@ a span:hover {
 
 #card-layout {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#card {
-    width: 100px;
-    height: 150px;
-    background-color: aqua;
+#card i {
+    font-size: 44px;
+    float: left;
+    display: block;
 }
 
 .about {
     background-color: white;
-    padding: 60px;
     margin: 0;
     flex-wrap: wrap;
 }
 
 .Facts {
     background-color: #fff;
-    padding: 60px;
 }
 
 .contact-flex {
     display: flex;
+    margin-top: 30px;
+    justify-content: center;
 }
 
 .resume {
     background-color: #fff;
-    padding: 60px;
+    padding: 0 10px 60px 10px;
 }
 
 .Portfolio,
 .services,
 .testimonials,
-.contact {
+.contact,
+.Skills,
+.resume,
+.about,
+.Facts {
     background-color: #fff;
-    padding: 60px;
+    padding: 20px;
+    transition: all 0.5s ease-in;
+
+}
+
+#title-para {
+    font-size: 32px;
+    margin-top: 20px;
 }
 
 .val {
     float: right;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.skill {
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+}
+
+.skill-name {
+    margin: 0 0 10px 0;
+    /* height: 60px; */
+}
+
+.skill-name span {
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .progress-bar {
     height: 10px;
     width: 100%;
-    background-color: #4c6774;
-    color: #149ddd;
+    background-color: #dce8f8;
+    /* color: #149ddd; */
 }
 
+.resume-item h5 {
+    width: 100px;
+    padding: 7px;
+    text-align: center;
+    background-color: #b7b7ba;
+}
+
+#about-info h3 {
+    font-size: 36px;
+    color: #1f5297;
+    margin-bottom: 0;
+}
+
+/* p{
+    font-size: 16px;
+} */
 .left {
     width: 100%;
+    height: auto;
     padding: 5px;
 }
 
@@ -286,6 +381,7 @@ h4,
 
 .service-items {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -299,12 +395,24 @@ h4,
     height: 3px;
     background-color: #1f5297;
     display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#topic-heading {
+    font-size: 32px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    font-weight: bold;
 }
 
 .title {
     height: 100vh;
     display: flex;
-    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
     align-items: center;
     color: #fff;
     z-index: -1;
@@ -312,9 +420,9 @@ h4,
 }
 
 #title-name {
-    font-size: 64px;
+    font-size: 3rem;
     margin: 0 0 15px 0;
-    line-height: 56px;
+    line-height: 1.625rem;
     font-family: "Raleway", sans-serif;
 }
 
@@ -325,6 +433,7 @@ h4,
 .right {
     padding: 5px;
     width: 100%;
+    /* position: relative; */
 }
 
 .resume-item {
@@ -332,6 +441,10 @@ h4,
     margin-top: -2px;
     border-left: 2px solid #1f5297;
     position: relative;
+}
+
+.resume-item h3 {
+    margin: 0;
 }
 
 .info {
@@ -351,27 +464,425 @@ h4,
 
 }
 
+.contact-form {
+    width: 400px;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 0 0 7px 0 #000;
+    border-radius: 5px;
+
+}
+
+.findme {
+    margin-right: 30px;
+    box-shadow: 0 0 7px 0 #000;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.contact-form h2 {
+    text-align: center;
+}
+
+form {
+    background: white;
+    padding: 0 30px;
+    margin-top: 40px;
+}
+
+label {
+
+    margin: 10px 0 0 0;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+    width: 150x;
+    padding: 0 5px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.slide-selector {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonials-image {
+    display: flex;
+    justify-content: center;
+}
+
+.saying {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 90%;
+    text-align: center;
+    font-style: italic;
+}
+
+.testimonials-image img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.slide {
+    width: 100%;
+    margin: 0 20px;
+}
+
+.testimonials-name,
+.position {
+    text-align: center;
+}
+
+/* .slide-selector label:hover {background: #149ddd; }
+#slide1:checked ~ .slide1 {
+    left: 0;
+}
+#slide2:checked ~ .slide2 {
+    display: none;
+}
+#slide3:checked ~ .slide3 {
+    left: -200%;
+}
+#slide4:checked ~ .slide4 {
+    margin-left: -300%;
+} */
+.slides {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.slide-selector input {
+    display: none;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: #fff;
+    border: 1px solid #149ddd;
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="submit"] {
+    border-radius: 25px;
+    background-color: rgb(31, 175, 31);
+    color: #FFFFFF;
+    width: 80px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0 0 2px black;
+
+}
+
+.btn {
+    display: none;
+}
+
 .links li {
     list-style: none;
     padding: 10px;
 }
 
-.Skills {
-    background-color: #f5f8fd;
-    padding: 60px;
+.resume-item::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: -9px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 2px solid #1f5297;
+    top: 0;
 }
 
-@media (max-width: 768px) {
-    #header {
-        display: none;
+button {
+    text-decoration: none;
+    background-color: #149ddd;
+    box-sizing: border-box;
+    border: none;
+}
+
+@media (max-width: 480px) and (min-width:320px) {
+
+    .row,
+    .info,
+    .contact-flex,
+    .title {
+        flex-direction: column;
+        /* align-items: center; */
     }
 
-    * {
+    .title-holder {
+        margin-left: 0;
+    }
+
+    .title {
+        max-height: 100vh;
+    }
+
+    #title-name {
+        font-size: 12px;
+    }
+
+    .info {
+        align-items: center;
+    }
+
+    .contact-form {
+        width: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact-form textarea[cols=20] {
+        column-span: 20;
+    }
+
+    .findme {
+        margin-bottom: 25px;
+        width: auto;
+    }
+
+    .findme iframe {
+        height: 200px;
+    }
+
+    .ul-side {
+        margin: 0;
+        padding: 0;
+    }
+
+    #about-pic {
+        margin: 25px;
+    }
+
+    #about-info .personal-info,
+    h3,
+    p {
+        margin: 20px auto auto 0;
+    }
+
+    #about-info h3 {
+        font-size: 20px;
+    }
+
+    #card-layout {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .service-items {
+        margin-top: 20px;
+    }
+
+    #card {
+        margin: 25px;
+    }
+
+    p {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .personal-info ul li {
+        margin-left: 0;
+    }
+
+    #about-pic {
+        width: 250px;
+        height: 250px;
+    }
+
+    #header {
+        display: none;
+        transition: all 1s ease-in-out;
+    }
+}
+
+@media (max-width: 768px) and (min-width:481px) {
+    #header {
+        display: none;
+        transition: all 1s ease-in-out;
+    }
+
+    .btn {
+        width: 50px;
+        height: 50px;
+        background-color: #149ddd;
+        border-radius: 50%;
+        z-index: 3;
+        position: fixed;
+        right: 15px;
+        top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-items {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 1024px) and (min-width:769px) {
+    #header {
+        display: none;
+        transition: all 1s ease-in-out;
+    }
+
+    .btn {
+        width: 50px;
+        height: 50px;
+        background-color: #149ddd;
+        border-radius: 50%;
+        z-index: 3;
+        position: fixed;
+        right: 15px;
+        top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
     }
 
     .main {
         margin-left: 0px;
         width: 100%;
+    }
+
+    .title-holder {
+        margin-left: 0;
+    }
+
+    #about-info h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+    #header {
+        display: none;
+        transition: all 1s ease-in-out;
+    }
+
+    .title-holder {
+        margin-left: 0;
+    }
+
+    .service-items {
+        justify-content: center;
+    }
+
+    .personal-info {
+        flex-direction: column;
+    }
+
+    #title-para {
+        font-size: 26px;
+        margin-top: 20px;
+    }
+
+    #title-name {
+        font-size: 32px;
+    }
+
+    .Portfolio,
+    .services,
+    .testimonials,
+    .contact,
+    .Skills,
+    .resume,
+    .about,
+    .Facts {
+        background-color: #fff;
+        padding: 10px;
+    }
+
+
+
+    .main {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .btn {
+        width: 50px;
+        height: 50px;
+        background-color: #149ddd;
+        border-radius: 50%;
+        z-index: 3;
+        position: fixed;
+        right: 15px;
+        top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+    }
+
+    .btn i {
+        font-size: 24px;
+        color: #fff;
+    }
+
+    #title-name {
+        font-size: 2rem;
+        margin: 0 0 15px 0;
+        line-height: 0.8125rem;
+        font-family: "Raleway", sans-serif;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .Portfolio,
+    .services,
+    .testimonials,
+    .contact,
+    .Skills,
+    .resume,
+    .about,
+    .Facts {
+        background-color: #fff;
     }
 }
