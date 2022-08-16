@@ -12,24 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <title>Document</title>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script>
-        function myfunction() {
-            if (document.getElementById('header').style.display !== 'none') {
-                document.getElementById('header').style.display = 'none'
-            }
-            else {
-                document.getElementById('header').style.display = 'block'
-            }
-        }
-    </script>
+    <!-- <script src="main.js"></script> -->
 </head>
 
 <body>
     <div class="btn" id="icon-btn">
         <button onclick="myfunction();"><i class="fas fa-bars"></i></button>
     </div>
-    <!-- <div class=""></div> -->
-    <img src="images/background.jpg" class="hero" alt="">
     <div class="header">
         <div>
             <header id="header">
@@ -47,18 +36,15 @@
                     </div>
                     <nav class="nav-bar nav-menu">
                         <ul>
-                            <li><a id="icon" class="l-e" href="#hero"><i class="fa-solid fa-house"
-                                        id="icon"></i><span>Home</span></a></li>
-                            <li><a class="l-e" href="#about"><i class="fa-solid fa-user"></i><span>About</span></a></li>
-                            <li><a class="l-e" href="#resume"><i class="fa-solid fa-file"></i><span>Resume</span></a>
+                            <li class="zxc"><a id="icon" class="l-e" href="#hero"><i class="fa-solid fa-house"
+                                        id="icon"></i>Home</a></li>
+                            <li><a class="l-e" href="#about"><i class="fa-solid fa-user"></i>About</a></li>
+                            <li><a class="l-e" href="#resume"><i class="fa-solid fa-file"></i>Resume</a>
                             </li>
-                            <li><a class="l-e" href="#portfolio"><i
-                                        class="fa-solid fa-book-open"></i><span>Portfolio</span></a>
+                            <li><a class="l-e" href="#portfolio"><i class="fa-solid fa-book-open"></i>Portfolio</a>
                             </li>
-                            <li><a class="l-e" href="#services"><i
-                                        class="fa-solid fa-server"></i><span>Services</span></a></li>
-                            <li><a class="l-e" href="#contact"><i
-                                        class="fa-solid fa-envelope"></i><span>Contact</span></a>
+                            <li><a class="l-e" href="#services"><i class="fa-solid fa-server"></i>Services</a></li>
+                            <li><a class="l-e" href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -66,7 +52,7 @@
             </header>
         </div>
 
-        <div class="title" id="hero">
+        <div class="title hero" id="hero">
             <div class="title-holder">
                 <h1 id="title-name">Pritesh Gawade</h1>
                 <p id="title-para">I'm Developer</p>
@@ -74,18 +60,13 @@
         </div>
     </div>
     <div class="main">
-        <!-- <div class="title" id="hero">
-            <div class="title-holder">
-                <h1 id="title-name">Pritesh Gawade</h1>
-                <p id="title-para">I'm<span data-typed-items="Designer, Developer, Photograper"></span></p>
-            </div>
-        </div> -->
-        <div class="about" id="about">
+        <div class="about section" id="about">
             <div class="about-heading">
                 <h2 id="topic-heading">About</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum accusantium perspiciatis odio,
-                    pariatur ducimus doloremque dolor adipisci labore. Nemo molestias ipsa accusantium aliquam
-                    eligendi eaque mollitia, eius minima repudiandae vitae?
+                <p>Hi, I am Pritesh Gawade from a small village called Vantem which is located in sattari taluka. I
+                    completed my bachelor of Science with my major begin computer science. I am 22 year old, currently
+                    working in the field of Web User Interface Development.
+
                 </p>
             </div>
             <div class="info">
@@ -96,7 +77,7 @@
                         quibusdam enim aliquid quo necessitatibus quaerat! Cumque, amet.</em></p>
                     <div class="personal-info">
                         <ul class="ul-side">
-                            <li><i class="fa-solid fa-angle-right"></i><strong>Birthday:</strong> 1 May 1995</li>
+                            <li><i class="fa-solid fa-angle-right"></i><strong>Birthday:</strong>16 April 2000</li>
                             <li><i class="fa-solid fa-angle-right"></i><strong>Website:</strong> www.example.com
                             </li>
                             <li><i class="fa-solid fa-angle-right"></i>
@@ -104,19 +85,20 @@
                                 +123 456 7890
                             </li>
                             <li><i class="fa-solid fa-angle-right"></i>
-                                <strong>City:</strong>
-                                New York, USA
+                                <strong>Village: Vantem Goa</strong>
+
                             </li>
                         </ul>
                         <ul class="ul-side">
                             <li><i class="fa-solid fa-angle-right"></i>
-                                <strong>Age:</strong>30
+                                <strong>Age:</strong>22
                             </li>
                             <li><i class="fa-solid fa-angle-right"></i>
                                 <strong>Degree:</strong>
-                                Master
+                                Bachelor
                             </li>
-                            <li><i class="fa-solid fa-angle-right"></i><strong>PhEmailone:</strong>email@example.com
+                            <li><i
+                                    class="fa-solid fa-angle-right"></i><strong>PhEmailone:</strong>priteshgawade11@gmail.com
                             </li>
                             <li><i class="fa-solid fa-angle-right"></i><strong>Freelance:</strong>
                                 Available</li>
@@ -163,7 +145,7 @@
             <div class="progress row">
                 <div class="left">
                     <div class="skill-name">
-                        <span>HTML <i class="val">100%</i></span>
+                        <span>HTML <i class="val">80%</i></span>
                         <progress class="progress-bar" id="file" value="100" max="100"></progress>
                     </div>
                     <div class="skill-name">
@@ -171,30 +153,23 @@
 
                         <progress class="progress-bar" id="file" value="90" max="100"></progress>
                     </div>
+
+                </div>
+                <div class="right">
                     <div class="skill-name">
                         <span>JAVASCRIPT <i class="val">75%</i></span>
                         <progress class="progress-bar" id="file" value="40" max="100"></progress>
                     </div>
-                </div>
-                <div class="right">
                     <div class="skill-name">
-                        <span>PHP<i class="val">80%</i></span>
+                        <span>PYTHON<i class="val">80%</i></span>
                         <progress class="progress-bar" id="file" value="80" max="100"></progress>
                     </div>
-                    <div class="skill-name">
-                        <span>WORDPRESS/CMS<i class="val">90%</i></span>
 
-                        <progress class="progress-bar" id="file" value="90" max="100"> </progress>
-                    </div>
-                    <div class="skill-name">
-                        <span>PHOTOSHOP<i class="val">55%</i></span>
 
-                        <progress class="progress-bar" id="file" value="30" max="100"></progress>
-                    </div>
                 </div>
             </div>
         </div>
-        <div class="resume" id="resume">
+        <div class="resume section" id="resume">
             <div>
                 <h2 id="topic-heading">Resume</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis adipisci eius, architecto quo
@@ -267,7 +242,7 @@
                 </div>
             </div>
         </div>
-        <div class="Portfolio" id="portfolio">
+        <div class="Portfolio section" id="portfolio">
             <div>
                 <h2 id="topic-heading">Portfolio</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem reiciendis error laudantium
@@ -332,7 +307,7 @@
                 </div>
             </div>
         </div>
-        <div class="services" id="services">
+        <div class="services section" id="services">
             <div>
                 <h2 id="topic-heading">Services</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore vero magni obcaecati, laudantium
@@ -373,7 +348,7 @@
                 </div>
             </div>
         </div>
-        <div class="testimonials">
+        <div class="testimonials ">
             <div>
                 <h2 id="topic-heading">Testimonials</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fugiat officiis quas
@@ -399,7 +374,7 @@
                             assumenda
                             repudiandae exercitationem nemo. Quia!</p>
                         <img src="" alt="">
-                        <h5 class="testimonials-name">Nikeel Gawade</h5>
+                        <h5 class="testimonials-name">Jayesh Gawade</h5>
                         <p class="position">Freelance</p>
                     </div>
                     <div class="slide3 slide">
@@ -409,7 +384,7 @@
                             assumenda
                             repudiandae exercitationem nemo. Quia!</p>
                         <img src="" alt="">
-                        <h5 class="testimonials-name">Nikeel Gawade</h5>
+                        <h5 class="testimonials-name">Jayant Gawade</h5>
                         <p class="position">Freelance</p>
                     </div>
                     <div class="slide4 slide">
@@ -419,7 +394,7 @@
                             assumenda
                             repudiandae exercitationem nemo. Quia!</p>
                         <img src="" alt="">
-                        <h5 class="testimonials-name">Nikeel Gawade</h5>
+                        <h5 class="testimonials-name">Ravina Gawade</h5>
                         <p class="position">Freelance</p>
                     </div>
                     <div class="slide5 slide">
@@ -429,7 +404,7 @@
                             assumenda
                             repudiandae exercitationem nemo. Quia!</p>
                         <img src="" alt="">
-                        <h5 class="testimonials-name">Nikeel Gawade</h5>
+                        <h5 class="testimonials-name">Pravin Gawade</h5>
                         <p class="position">Freelance</p>
                     </div>
                     <div class="slide6 slide">
@@ -442,28 +417,21 @@
                         <h5 class="testimonials-name">Nikeel Gawade</h5>
                         <p class="position">Freelance</p>
                     </div>
+                    <!-- slider -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-
                 <div class="slide-selector">
-                    <input type="radio" name="slide" id="slide1" checked>
                     <label for="slide1" class="circle"></label>
-                    <input type="radio" name="slide" id="slide2">
                     <label for="slide2" class="circle"></label>
-                    <input type="radio" name="slide" id="slide3">
                     <label for="slide3" class="circle"></label>
-                    <input type="radio" name="slide" id="slide4">
                     <label for="slide4" class="circle"></label>
-                    <input type="radio" name="slide" id="slide5">
                     <label for="slide5" class="circle"></label>
-                    <!-- <div ><a href="#slide2" role="button"></a></div>
-                    <div class="circle"><a href="#slide3"></a></div>
-                    <div class="circle"><a href="#slide4"></a></div>
-                    <div class="circle"><a href="#slide5"></a></div>
-                    <div class="circle"><a href="#slide6"></a></div> -->
+                    <label for="slide5" class="circle"></label>
                 </div>
             </div>
         </div>
-        <div class="contact" id="contact">
+        <div class="contact section" id="contact">
             <div>
                 <h2 id="topic-heading">Contact</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A sapiente nisi eos, rem ullam laudantium
@@ -512,6 +480,11 @@
             </div>
         </div>
     </div>
+    <footer>
+        <p>© Copyright <strong>iPortfolio</strong></p>
+        <p>Designed by Pritesh Gawade</p>
+    </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
