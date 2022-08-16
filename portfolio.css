@@ -8,11 +8,10 @@ body {
 .hero {
     width: 100%;
     height: 100vh;
-    background-image: url('./images/background.jpg');
-    background-repeat: no-repeat;
+    background: url('background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
-    z-index: -2;
+    /* z-index: -2; */
 }
 
 p {
@@ -42,6 +41,10 @@ p {
     border-radius: 50%;
     border: 8px solid #272829;
     margin: 8px 75px;
+}
+
+.nav-menu li:hover .nav-icons {
+    color: yellow;
 }
 
 .l-e i {
@@ -81,18 +84,20 @@ p {
     justify-content: center;
 }
 
-li.l-e:hover {
-    color: aqua;
-    transition: 0.3s;
-}
+
 
 .nav-menu a:hover {
-    color: #fff;
+    color: rgb(100, 62, 188);
     transition: 0.3s;
 }
 
-.nav-menu i:hover {
-    color: #149ddd;
+.nav-bar a {
+    color: #ffffff;
+}
+
+.active-links {
+    color: rgb(100, 62, 188) !important;
+    /* padding: 20px; */
     transition: 0.3s;
 }
 
@@ -592,15 +597,35 @@ input {
 #slide4:checked ~ .slide4 {
     margin-left: -300%;
 } */
-
-footer {
-    background-color: #8787a2;
+.portfoilio-element {
+    position: relative;
+    justify-content: center;
 }
+
+.portfoilio-element a {
+    text-align: center;
+    padding: 5px;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #31393c;
+    text-decoration: none;
+    position: absolute;
+    left: 45%;
+    top: 80%;
+    margin: 0;
+
+}
+
+.portfoilio-element a:hover {
+    background-color: #149ddd;
+    transition: all 0.3s;
+}
+
 
 footer p {
     color: rgb(255, 255, 255);
     text-align: center;
-    /* position: fixed; */
+    font-size: 14px;
 
 }
 
