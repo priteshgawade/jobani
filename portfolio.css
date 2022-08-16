@@ -8,7 +8,8 @@ body {
 .hero {
     width: 100%;
     height: 100vh;
-    background: url('jobani/images/background.jpg') no-repeat;
+    background-image: url('./images/background.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     z-index: -2;
