@@ -4,6 +4,7 @@ function myfunction() {
     document.getElementById('header').style.display = 'none';
   }
   else {
+
     document.getElementById('header').style.display = 'block';
   }
 }

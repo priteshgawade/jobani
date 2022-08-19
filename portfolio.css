@@ -8,8 +8,7 @@ body {
 .hero {
     width: 100%;
     height: 100vh;
-    background: url('./images/background.jpg');
-    background-repeat: no-repeat;
+    background: url('./images/background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     /* z-index: -2; */
@@ -207,6 +206,7 @@ p {
 .main {
     margin-left: 300px;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 #about-pic {
@@ -496,6 +496,9 @@ h4,
 
 .links {
     display: flex;
+    text-align: center;
+    width: auto;
+    background-color: #FFFFFF;
     justify-content: center;
 }
 
@@ -585,34 +588,34 @@ input {
     text-align: center;
 }
 
-/* .slide-selector label:hover {background: #149ddd; }
-#slide1:checked ~ .slide1 {
-    left: 0;
+.links a {
+    text-decoration: none;
 }
-#slide2:checked ~ .slide2 {
-    display: none;
-}
-#slide3:checked ~ .slide3 {
-    left: -200%;
-}
-#slide4:checked ~ .slide4 {
-    margin-left: -300%;
-} */
+
 .portfoilio-element {
     position: relative;
+    overflow: hidden;
     justify-content: center;
+}
+
+.portfoilio-element:hover a {
+    bottom: 0;
+    /* opacity: 10; */
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all ease-in-out 0.3s;
 }
 
 .portfoilio-element a {
     text-align: center;
-    padding: 5px;
+    padding: 5px 0;
     color: #ffffff;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     background-color: #31393c;
+    width: 100%;
     text-decoration: none;
     position: absolute;
-    left: 45%;
-    top: 80%;
+    left: 0;
+    bottom: -60px;
     margin: 0;
 
 }
@@ -708,6 +711,7 @@ button {
     border: none;
 }
 
+/*--------------------- Media Queries -------------------- */
 @media (max-width: 480px) and (min-width:320px) {
 
     .row,
@@ -962,6 +966,6 @@ button {
     .resume,
     .about,
     .Facts {
-        background-color: #fff;
+        background-color: rgb(255, 255, 255);
     }
 }
