@@ -596,6 +596,10 @@ input {
     position: relative;
     overflow: hidden;
     justify-content: center;
+    transition: 0.5s;
+}
+#web,#app,#card{
+    transition: 0.5s ease-in-out all;
 }
 
 .portfoilio-element:hover a {
@@ -605,6 +609,19 @@ input {
     transition: all ease-in-out 0.3s;
 }
 
+.links a{
+    color: #149ddd;
+    background-color: #FFF;
+    padding: 4px 12px;
+    border-radius: 10%;
+}
+#web{
+    display: block;
+    transition: all 0.3s;
+}
+.links a:active{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
 .portfoilio-element a {
     text-align: center;
     padding: 5px 0;
