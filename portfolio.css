@@ -40,11 +40,11 @@ p {
     height: 120px;
     border-radius: 50%;
     border: 8px solid #272829;
-    margin: 8px 75px;
+    margin: 25px 75px;
 }
 
 .nav-menu li:hover .nav-icons {
-    color: yellow;
+    color: #149ddd;
 }
 
 .l-e i {
@@ -149,7 +149,7 @@ p {
 }
 
 .social-links a {
-    padding: 8px 4px;
+    padding: 14px 3px;
     width: 36px;
     height: 36px;
     line-height: 1;
@@ -507,6 +507,7 @@ h4,
     position: relative;
     flex-wrap: wrap;
     justify-content: center;
+    transition: 0.3s ease-in-out all;
 
 }
 
@@ -516,7 +517,6 @@ h4,
     background-color: white;
     box-shadow: 0 0 7px 0 #000;
     border-radius: 5px;
-
 }
 
 .findme {
