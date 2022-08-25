@@ -555,7 +555,10 @@ input {
     display: flex;
     justify-content: center;
 }
-
+.s-p{
+    display: flex;
+    justify-content: center;
+}
 .testimonials-image {
     display: flex;
     justify-content: center;
@@ -564,8 +567,8 @@ input {
 .saying {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     padding: 15px;
-    margin-left: 40px;
-    width: 90%;
+    /* margin-left: 40px; */
+    width: fit-content;
     text-align: center;
     font-style: italic;
 }
@@ -598,7 +601,10 @@ input {
     justify-content: center;
     transition: 0.5s;
 }
-#web,#app,#card{
+
+#web,
+#app,
+#card {
     transition: 0.5s ease-in-out all;
 }
 
@@ -609,19 +615,22 @@ input {
     transition: all ease-in-out 0.3s;
 }
 
-.links a{
+.links a {
     color: #149ddd;
     background-color: #FFF;
     padding: 4px 12px;
     border-radius: 10%;
 }
-#web{
+
+#web {
     display: block;
     transition: all 0.3s;
 }
-.links a:active{
+
+.links a:active {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+
 .portfoilio-element a {
     text-align: center;
     padding: 5px 0;
@@ -651,9 +660,11 @@ footer p {
 }
 
 .slide {
-    display: none;
+    display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
+    height: 35vh;
 }
 
 .prev:hover,
