@@ -31,7 +31,7 @@ p {
     top: 0;
     bottom: 0;
     left: 0;
-    z-index: 1;
+    z-index: 9999;
     display: block;
 }
 
@@ -555,35 +555,62 @@ input {
     display: flex;
     justify-content: center;
 }
-.s-p{
+
+.s-p {
     display: flex;
     justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    /* background-color: #149ddd; */
+    /* height: 300px; */
+    position: relative;
 }
+
 .testimonials-image {
     display: flex;
     justify-content: center;
+
+}
+
+.testimonials-image img {
+    object-fit: cover;
 }
 
 .saying {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); */
     padding: 15px;
+    background-color: #149ddd;
+    border-radius: 10px;
     /* margin-left: 40px; */
-    width: fit-content;
     text-align: center;
     font-style: italic;
+}
+
+.saying::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #149ddd;
+    bottom: 1px;
+    left: 46%;
+    transform: rotate(45deg);
 }
 
 .testimonials-image img {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    margin: 0 auto;
+    margin: 20px 0 0 0;
 }
 
-/* .slide {
+.slide {
     width: 100%;
-    margin: 0 20px;
-} */
+    margin: 20px 0;
+    /* overflow: hidden; */
+    /* background-color: #149ddd; */
+}
 
 .testimonials-name,
 .position,
@@ -661,10 +688,17 @@ footer p {
 
 .slide {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    height: 35vh;
+    width: 320px;
+    height: 55vh;
+    z-index: -555;
+    overflow: hidden;
+}
+
+.slides {
+    overflow: hidden;
 }
 
 .prev:hover,
@@ -790,15 +824,21 @@ button {
         padding: 0;
     }
 
+    .position {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
     #about-pic {
         margin: 25px;
     }
 
-    #about-info .personal-info,
+    /* #about-info .personal-info,
     h3,
     p {
         margin: 20px auto auto 0;
-    }
+    } */
 
     #about-info h3 {
         font-size: 20px;

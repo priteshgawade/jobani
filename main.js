@@ -10,33 +10,64 @@ function myfunction() {
 }
 
 //slider code
-let slideIndex = 1;
-showSlides(slideIndex);
+// let slideIndex = 1;
+// showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slide");
-  let dots = document.getElementsByClassName("circle");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName("slide");
+//   let dots = document.getElementsByClassName("circle");
+//   if (n > slides.length) { slideIndex = 1 }
+//   if (n < 1) { slideIndex = slides.length }
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex - 1].style.display = "block";
+//   dots[slideIndex - 1].className += " active";
+// }
+
+
+var swiper = new Swiper(".slide-content", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  // slidesPerGroup: 3,
+  loop: true,
+  // loopFillGroupWithBlank: true,
+  centerslide: true,
+  fade: true,
+  grabcursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+     520: {
+      slidesPerView: 2
+    },
+      950: {
+      slidesPerView: 3
+    }
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
-
+});
 //header nav links active on scroll
 sections = document.querySelectorAll('.section');
 
